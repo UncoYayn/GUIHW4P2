@@ -1,0 +1,61 @@
+<!--
+File: index.html
+GUI Assignment: HW4 part2
+Ryan Trinh, UMass Lowell Computer Science,
+Ryan_Trinh@cs.uml.edu
+Copyright (c) 2023 by Ryan Trinh. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="java.js" defer></script>
+    <title>Multiplication Table Generator</title>
+</head>
+<body>
+    <h2>Multiplication Table Generator</h2>
+    <form id="tableForm" class="validate">
+        <label for="minRows">Minimum Rows:</label>
+        <input type="number" id="minRows" name="minRows" required min="-50" max="50">
+        <div class="error-message" id="errorMinRows"></div>
+    </form>
+
+    <div id="minRowsSlider"></div>
+
+    <form id="tableForm" class="validate">
+        <label for="minCols">Minimum Columns:</label>
+        <input type="number" id="minCols" name="minCols" required min="-50" max="50">
+        <div class="error-message" id="errorMinCols"></div>
+    </form>
+
+    <div id="minColsSlider"></div>
+
+    <form id="tableForm" class="validate">
+        <label for="maxRows">Maximum Rows:</label>
+        <input type="number" id="maxRows" name="maxRows" required min="-50" max="50">
+        <div class="error-message" id="errorMaxRows"></div>
+    </form>
+
+    <div id="maxRowsSlider"></div>
+
+    <form id="tableForm" class="validate">
+        <label for="maxCols">Maximum Columns:</label>
+        <input type="number" id="maxCols" name="maxCols" required min="-50" max="50">
+        <div class="error-message" id="errorMaxCols"></div>
+    </form>
+
+    <div id="maxColsSlider"></div>
+    
+
+    <div id="errorMessage"></div>
+
+    <div class="table-container" id="tableContainer"></div>
+</body>
+</html>
